@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Praveen Reddy | Portfolio</title>
+<style>
+body{
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#fff;
+  color:#222;
+}
+.nav{
+  position:absolute;
+  top:25px;
+  right:60px;
+}
+.nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#444;
+}
+.container{
+  max-width:1100px;
+  margin:80px auto;
+  display:flex;
+  gap:80px;
+  align-items:flex-start;
+}
+.photo img{
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  object-fit:cover;
+}
+h1{font-size:42px;margin:0}
+h3{font-weight:400;color:#555}
+.buttons{
+  display:flex;
+  gap:20px;
+  margin-top:30px;
+}
+.btn{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  cursor:pointer;
+  border:2px solid rgba(0,0,0,.15);
+}
+.resume{background:#b7e15a}
+.research{background:#f4a300}
+.outreach{background:#7fd6d1}
+.personal{background:#d9d9d9}
+
+.section{
+  display:none;
+  margin-top:30px;
+  max-width:600px;
+}
+.section.active{
+  display:block;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="photo">
+    <img src="D:\graduation cermenoy\IMG_0548 - Copy.jpeg" alt="Praveen Reddy">
+  </div>
+
+  <div>
+    <h1>Praveen Reddy</h1>
+    <h3>Senior Mobile Application Developer</h3>
+
+    <div class="buttons">
+      <div class="btn resume" onclick="showSection('resume')">Resume</div>
+      <div class="btn research" onclick="showSection('research')">Experience</div>
+      <div class="btn outreach" onclick="showSection('outreach')">Skills</div>
+      <div class="btn personal" onclick="showSection('personal')">Contact</div>
+    </div>
+
+    <!-- CONTENT SECTIONS -->
+    <div id="resume" class="section active">
+      <h2>Resume</h2>
+      <p>
+        Senior Mobile Application Developer with 10+ years of experience in iOS,
+        Android, and Hybrid mobile application development. Expertise in Objective‑C,
+        Swift, JavaScript, and Cordova-based architectures.
+      </p>
+    </div>
+
+    <div id="research" class="section">
+      <h2>Professional Experience</h2>
+      <ul>
+          <li><b>MHBE (2023–Present)</b> – Sr. Mobile Application Developer</li>
+          <li><b>Walmart (2020–2022)</b> – Sr. Mobile Application Developer</li>
+          <li><b>Cartus (2018–2020)</b> – : Sr. React Native/ Mobile Application Developers</li>
+          <li><b>Colruyt Group (2016–2018)</b> – IOS Developer</li>
+          <li><b>Amdocs (2014–2015)</b> – IOS Developer</li>
+      </ul>
+    </div>
+
+    <div id="outreach" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li><b>Languages & Frameworks:</b> React Native (iOS & Android), Swift, SwiftUI, Objective-C, Combine, UIKit, Core Data, SwiftData</li>
+
+            <li><b>Programming Languages:</b> Swift, Objective-C, C++, Kotlin, Java, C#, JavaScript, HTML, CSS, SQL, Angular 6</li>
+
+            <li><b>Mobile Platforms:</b> iOS (10–14), Android SDK (9, 10, 11), iPadOS</li>
+
+            <li><b>Cocoa & iOS Frameworks:</b> Core Data, Core Graphics, Core Location, MapKit, Quartz Core, AVFoundation, UIKit, Address Book, EventKit</li>
+
+            <li><b>Architectures & Patterns:</b> MVVM, SOLID Principles, Dependency Injection, Reactive Programming</li>
+
+            <li><b>Concurrency & Threading:</b> GCD, NSOperationQueue, NSThread, async/await, TaskGroup</li>
+
+            <li><b>Databases:</b> Oracle 9i/10g, PostgreSQL, SQL Server, SQLite, Core Data</li>
+
+            <li><b>APIs & Data:</b> RESTful APIs, JSON, Core Data, SQLite, PostgreSQL</li>
+
+            <li><b>Testing & CI/CD:</b> XCTest, XCUITest, JUnit, Mockito, Jenkins, GitHub Actions, TestFlight</li>
+
+            <li><b>Tools:</b> Xcode, Git, Bitbucket, JIRA, Instruments, Azure DevOps, Postman</li>
+
+            <li><b>Operating Systems:</b> macOS (10.5–High Sierra), Linux, UNIX, Windows 7/8/XP</li>
+
+            <li><b>Cloud & Integrations:</b> AWS, Azure Application Insights, MuleSoft, Salesforce</li>
+        </ul>
+
+    </div>
+
+    <div id="personal" class="section">
+      <h2>Contact</h2>
+      <p>
+        📧 thepraveen.reddy24@gmail.com<br>
+        📞 +1 (507) 400‑9582<br>
+        📍 San Francisco, CA
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
